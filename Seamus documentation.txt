@@ -1,0 +1,27 @@
+Programming Project Documentation
+
+Summary:
+My role in the team was data representation. I went about this by looking at the entries and seeing what 
+kind of data was there. I noticed that there was both categorical and continuous data, so I thought it would be 
+appropriate to represent the continuous data by using a histogram, and the categorical data using a pie chart.
+
+Methodology:
+In order to create the histogram, we created a histogram class with the constructor taking in a set of 
+variables that would allow us to get the position and size of the histogram, the histogram values, the colour
+scheme and the number of bars, etc. The basic concept of drawing the histogram was basically having a loop 
+that would draw a rectangle, whose height would be the histogram value and width would be the bar length, at 
+the current x position and then incrementing the x position by the bar length and drawing the next rectangle.
+My implementation is slightly different in order to have the bars raise from 0 to the histogram values, but this 
+is the basic concept. we also implemented a hover function that would display some details about that specific 
+bar as well as change the colour to highlight the bar. We did this by simply creating a border for where the 
+mouse should be if it Is hovering over a bar. 
+
+In order to create the pie chart, we created a constructor that would allow us to get the position of the pie chart, 
+the diameter, an integer array of frequencies to be represented by the pie chart, and a String array for labelling.
+The basic concept of constructing the pie chart was finding the total amount of frequencies in the integer array, 
+using that to find the degrees of each sector and then converting the degrees to radians. We then used the arc() function 
+do draw an arc using a start and end angle in radians. To make this work we had to keep track of the current angle,
+which was the sum of all previous angles. Again, our implementation is slightly different in order to incorporate the
+functionality of the angles starting at 0 and ending at the end value of the angles. We also implemented a hover
+function for the pie chart by first finding if the mouse was within the circle and then checking if the mouse was
+within a certain angle using atan2() function.
